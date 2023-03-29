@@ -89,6 +89,7 @@ public:
 		logs.close();
 		this->userCount++;
 		std::cout << "You have successfully registered!\n";
+		delete(user)
 	}
 };
 
@@ -103,7 +104,7 @@ int main() {
 		if (userChoice == '1') action->registration();
 		else if (userChoice == '2') action->autorization();
 	} while (action->SUB != 1);
-
+	delete(action);
 	std::cout << "you have successfully autorization!";
 	return 0;
 }
